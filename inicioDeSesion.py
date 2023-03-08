@@ -12,16 +12,14 @@ class InicioSesion:
         mainFrame.grid(column=0, row=0)
 
         usuarioEntry = ttk.Entry(mainFrame, width=25,  textvariable=self.usuario)
-        usuarioEntry.grid(column=1, row=0)
+        usuarioEntry.grid(column=1, row=0, pady=10)
 
         contraseñaEntry = ttk.Entry(mainFrame, width=25,  textvariable=self.contraseña)
-        contraseñaEntry.grid(column=1, row=2)
+        contraseñaEntry.grid(column=1, row=2, pady=10)
 
-        ttk.Label(mainFrame, text="usuario:").grid(column=0, row=0)
-        ttk.Label(mainFrame, text="").grid(column=0, row=1)
-        ttk.Label(mainFrame, text="").grid(column=0, row=3)
-        ttk.Label(mainFrame, text="contraseña:").grid(column=0, row=2)
-        ttk.Button(mainFrame, text="ingresar", command=self.registrar).grid(column=1, row=4, sticky=(E)) 
+        ttk.Label(mainFrame, text="usuario:").grid(column=0, row=0, pady=10)
+        ttk.Label(mainFrame, text="contraseña:").grid(column=0, row=2, pady=10)
+        ttk.Button(mainFrame, text="ingresar", command=self.registrar).grid(column=1, row=4, pady=10 , sticky=(E)) 
 
         raiz.bind("<Return>", self.registrar)
         usuarioEntry.focus()
